@@ -1,5 +1,5 @@
 Package: floodchlorinationsurvey
-Title: What the Package Does (One Line, Title Case)
+Title: USAID Flood Response Rehabilitation and Chlorination Survey
 Version: 0.0.0.9000
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
@@ -19,7 +19,7 @@ Authors@R: c(
     person("Mayamiko", "Jumbe", role = "ctb"),
     person("Given", "Nyasulu", role = "ctb")
   )
-Description: What the package does (one paragraph).
+Description: This R package provides tools for analyzing and visualizing data from the USAID Flood Response Rehabilitation and Chlorination Survey conducted in Mulanje, Malawi (2019–2020). It includes functions to assess handpump component replacements, evaluate changes in functionality before and after rehabilitation, and identify common repair trends using mWater-collected data.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
