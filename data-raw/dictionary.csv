@@ -1,0 +1,119 @@
+directory,file_name,variable_name,variable_type,description
+data/,floodchlorinationsurvey.rda,submitted_on,character,Date when the data was submitted
+data/,floodchlorinationsurvey.rda,water_point_name,character,Name of the water point
+data/,floodchlorinationsurvey.rda,latitude,numeric,Latitude coordinate of the water point
+data/,floodchlorinationsurvey.rda,longitude,numeric,Longitude coordinate of the water point
+data/,floodchlorinationsurvey.rda,chlorination_rehab_date,character,Date chlorination or rehabilitation was conducted
+data/,floodchlorinationsurvey.rda,community_mobilised,character,Indicates whether the community was mobilized for support
+data/,floodchlorinationsurvey.rda,functional_status_before,character,Functional status of the water point before intervention
+data/,floodchlorinationsurvey.rda,rating_bolts_nuts,character,Condition rating of bolts and nuts
+data/,floodchlorinationsurvey.rda,rating_compression_cone,character,Condition rating of the compression cone
+data/,floodchlorinationsurvey.rda,rating_cylinder,character,Condition rating of the cylinder
+data/,floodchlorinationsurvey.rda,rating_flapper,character,Condition rating of the flapper
+data/,floodchlorinationsurvey.rda,rating_footvalve_bobbin,character,Condition rating of the footvalve bobbin
+data/,floodchlorinationsurvey.rda,rating_footvalve_body,character,Condition rating of the footvalve body
+data/,floodchlorinationsurvey.rda,rating_footvalve_oring,character,Condition rating of the footvalve O ring
+data/,floodchlorinationsurvey.rda,rating_fulcrum_pin,character,Condition rating of the fulcrum pin
+data/,floodchlorinationsurvey.rda,rating_fulcrum_bearings,character,Condition rating of the fulcrum pin bush bearings
+data/,floodchlorinationsurvey.rda,rating_handle,character,Condition rating of the pump handle
+data/,floodchlorinationsurvey.rda,rating_hanger_pin,character,Condition rating of the hanger pin
+data/,floodchlorinationsurvey.rda,rating_hanger_bearings,character,Condition rating of the hanger pin bush bearings
+data/,floodchlorinationsurvey.rda,rating_head_bolt,character,Condition rating of the head bolt
+data/,floodchlorinationsurvey.rda,rating_plunger_bobbin,character,Condition rating of the plunger bobbin
+data/,floodchlorinationsurvey.rda,rating_plunger_body,character,Condition rating of the plunger body
+data/,floodchlorinationsurvey.rda,rating_plunger_useal,character,Condition rating of the plunger U seal
+data/,floodchlorinationsurvey.rda,rating_pump_head_case,character,Condition rating of the pump head case
+data/,floodchlorinationsurvey.rda,rating_pump_head_cover,character,Condition rating of the pump head cover
+data/,floodchlorinationsurvey.rda,rating_rising_main,numeric,Condition rating of the rising main pipe
+data/,floodchlorinationsurvey.rda,rating_rising_centralisers,character,Condition rating of rising main centralisers
+data/,floodchlorinationsurvey.rda,rating_rods,character,Condition rating of connecting rods
+data/,floodchlorinationsurvey.rda,rating_rod_centralisers,character,Condition rating of rod centralisers
+data/,floodchlorinationsurvey.rda,rating_rodhanger,character,Condition rating of the rod hanger
+data/,floodchlorinationsurvey.rda,rating_rope,character,Condition rating of the rope
+data/,floodchlorinationsurvey.rda,rating_socket,character,Condition rating of the socket
+data/,floodchlorinationsurvey.rda,rating_steel_cone,character,Condition rating of the steel cone
+data/,floodchlorinationsurvey.rda,rating_top_sleeve,character,Condition rating of the top sleeve
+data/,floodchlorinationsurvey.rda,rod_count,numeric,Number of rods in the borehole
+data/,floodchlorinationsurvey.rda,broken_parts_fished_out,character,Indicates whether broken parts were retrieved from the borehole
+data/,floodchlorinationsurvey.rda,broken_parts_comments,character,Comments on the broken parts retrieved
+data/,floodchlorinationsurvey.rda,silt_observed,character,Presence of silt on parts (Yes/No)
+data/,floodchlorinationsurvey.rda,corrosion_observed,character,Presence of corrosion on parts (Yes/No)
+data/,floodchlorinationsurvey.rda,slime_observed,character,Presence of slime buildup on parts (Yes/No)
+data/,floodchlorinationsurvey.rda,rising_main_length_m,numeric,Length of the rising main pipe in meters
+data/,floodchlorinationsurvey.rda,rope_attached,character,Indicates whether a rope was attached to the rising main
+data/,floodchlorinationsurvey.rda,photos_of_removed_parts,character,URLs or filenames of photos showing removed parts
+data/,floodchlorinationsurvey.rda,pedestal_condition,character,General condition of the pedestal
+data/,floodchlorinationsurvey.rda,pedestal_firm,character,Is the pedestal held firmly in place?
+data/,floodchlorinationsurvey.rda,photos_of_civil_work,character,URLs or filenames of photos showing surrounding infrastructure
+data/,floodchlorinationsurvey.rda,latrines_within_30m,character,Presence of latrines within 30m of the water point
+data/,floodchlorinationsurvey.rda,latrines_within_100m,character,Presence of latrines within 100m of the water point
+data/,floodchlorinationsurvey.rda,cemetery_within_30m,character,Presence of cemetery within 30m
+data/,floodchlorinationsurvey.rda,waste_dumps_within_30m,character,Presence of waste dumps within 30m
+data/,floodchlorinationsurvey.rda,difficult_access_by_car,character,Whether the site is difficult to reach by car
+data/,floodchlorinationsurvey.rda,chlorination_done,character,Indicates whether chlorination was conducted
+data/,floodchlorinationsurvey.rda,parts_chlorinated,character,Indicates whether the parts were chlorinated
+data/,floodchlorinationsurvey.rda,parts_chlorinated_unknown,logical,TRUE if unsure whether parts were chlorinated
+data/,floodchlorinationsurvey.rda,borehole_depth_m,numeric,Total depth of the borehole in meters
+data/,floodchlorinationsurvey.rda,water_depth_m,numeric,Depth of water in the borehole in meters
+data/,floodchlorinationsurvey.rda,chlorine_water_buckets,numeric,Number of 20L buckets of chlorine-treated water used
+data/,floodchlorinationsurvey.rda,hth_dissolved_properly,character,Whether 1g of HTH was dissolved for every 20L of water
+data/,floodchlorinationsurvey.rda,chlorinated_parts_installed,character,Were chlorinated parts reinstalled after treatment?
+data/,floodchlorinationsurvey.rda,replaced_rising_main_length_m,numeric,Length of rising main pipe replaced (m)
+data/,floodchlorinationsurvey.rda,replaced_rod_count,numeric,Number of rods replaced
+data/,floodchlorinationsurvey.rda,replaced_bolts_nuts_tick,logical,TRUE if bolts and nuts were replaced
+data/,floodchlorinationsurvey.rda,replaced_bolts_nuts_count,numeric,Number of bolts and nuts replaced
+data/,floodchlorinationsurvey.rda,replaced_compression_cone_tick,logical,TRUE if compression cone was replaced
+data/,floodchlorinationsurvey.rda,replaced_compression_cone_count,numeric,Number of compression cones replaced
+data/,floodchlorinationsurvey.rda,replaced_cylinder_tick,logical,TRUE if cylinder was replaced
+data/,floodchlorinationsurvey.rda,replaced_cylinder_count,numeric,Number of cylinders replaced
+data/,floodchlorinationsurvey.rda,replaced_flapper_tick,logical,TRUE if flapper was replaced
+data/,floodchlorinationsurvey.rda,replaced_flapper_count,numeric,Number of flappers replaced
+data/,floodchlorinationsurvey.rda,replaced_footvalve_bobbin_tick,logical,TRUE if footvalve bobbin was replaced
+data/,floodchlorinationsurvey.rda,replaced_footvalve_bobbin_count,numeric,Number of footvalve bobbins replaced
+data/,floodchlorinationsurvey.rda,replaced_footvalve_body_tick,logical,TRUE if footvalve body was replaced
+data/,floodchlorinationsurvey.rda,replaced_footvalve_body_count,numeric,Number of footvalve bodies replaced
+data/,floodchlorinationsurvey.rda,replaced_footvalve_oring_tick,logical,TRUE if footvalve O-ring was replaced
+data/,floodchlorinationsurvey.rda,replaced_footvalve_oring_count,numeric,Number of O-rings replaced
+data/,floodchlorinationsurvey.rda,replaced_fulcrum_pin_tick,logical,TRUE if fulcrum pin was replaced
+data/,floodchlorinationsurvey.rda,replaced_fulcrum_pin_count,numeric,Number of fulcrum pins replaced
+data/,floodchlorinationsurvey.rda,replaced_fulcrum_bearings_tick,logical,TRUE if fulcrum bearings were replaced
+data/,floodchlorinationsurvey.rda,replaced_fulcrum_bearings_count,numeric,Number of fulcrum bearings replaced
+data/,floodchlorinationsurvey.rda,replaced_handle_tick,logical,TRUE if handle was replaced
+data/,floodchlorinationsurvey.rda,replaced_handle_count,numeric,Number of handles replaced
+data/,floodchlorinationsurvey.rda,replaced_hanger_pin_tick,logical,TRUE if hanger pin was replaced
+data/,floodchlorinationsurvey.rda,replaced_hanger_pin_count,numeric,Number of hanger pins replaced
+data/,floodchlorinationsurvey.rda,replaced_hanger_bearings_tick,logical,TRUE if hanger bearings were replaced
+data/,floodchlorinationsurvey.rda,replaced_hanger_bearings_count,numeric,Number of hanger bearings replaced
+data/,floodchlorinationsurvey.rda,replaced_head_bolt_tick,logical,TRUE if head bolt was replaced
+data/,floodchlorinationsurvey.rda,replaced_head_bolt_count,numeric,Number of head bolts replaced
+data/,floodchlorinationsurvey.rda,replaced_plunger_bobbin_tick,logical,TRUE if plunger bobbin was replaced
+data/,floodchlorinationsurvey.rda,replaced_plunger_bobbin_count,numeric,Number of plunger bobbins replaced
+data/,floodchlorinationsurvey.rda,replaced_plunger_body_tick,logical,TRUE if plunger body was replaced
+data/,floodchlorinationsurvey.rda,replaced_plunger_body_count,numeric,Number of plunger bodies replaced
+data/,floodchlorinationsurvey.rda,replaced_plunger_useal_tick,logical,TRUE if plunger U-seal was replaced
+data/,floodchlorinationsurvey.rda,replaced_plunger_useal_count,numeric,Number of U-seals replaced
+data/,floodchlorinationsurvey.rda,replaced_pump_head_case_tick,logical,TRUE if pump head case was replaced
+data/,floodchlorinationsurvey.rda,replaced_pump_head_case_count,numeric,Number of pump head cases replaced
+data/,floodchlorinationsurvey.rda,replaced_pump_head_cover_tick,logical,TRUE if pump head cover was replaced
+data/,floodchlorinationsurvey.rda,replaced_pump_head_cover_count,numeric,Number of pump head covers replaced
+data/,floodchlorinationsurvey.rda,replaced_rising_main_tick,logical,TRUE if rising main pipe was replaced
+data/,floodchlorinationsurvey.rda,replaced_rising_main_count,numeric,Number of rising main pipes replaced
+data/,floodchlorinationsurvey.rda,replaced_rising_centralisers_tick,logical,TRUE if rising main centralisers were replaced
+data/,floodchlorinationsurvey.rda,replaced_rising_centralisers_count,numeric,Number of centralisers replaced
+data/,floodchlorinationsurvey.rda,replaced_rods_tick,logical,TRUE if rods were replaced
+data/,floodchlorinationsurvey.rda,replaced_rods_count,numeric,Number of rods replaced
+data/,floodchlorinationsurvey.rda,replaced_rod_centralisers_tick,logical,TRUE if rod centralisers were replaced
+data/,floodchlorinationsurvey.rda,replaced_rod_centralisers_count,numeric,Number of rod centralisers replaced
+data/,floodchlorinationsurvey.rda,replaced_rodhanger_tick,logical,TRUE if rodhanger was replaced
+data/,floodchlorinationsurvey.rda,replaced_rodhanger_count,numeric,Number of rodhangers replaced
+data/,floodchlorinationsurvey.rda,replaced_rope_tick,logical,TRUE if rope was replaced
+data/,floodchlorinationsurvey.rda,replaced_rope_count,numeric,Number of ropes replaced
+data/,floodchlorinationsurvey.rda,replaced_socket_tick,logical,TRUE if socket was replaced
+data/,floodchlorinationsurvey.rda,replaced_socket_count,numeric,Number of sockets replaced
+data/,floodchlorinationsurvey.rda,replaced_steel_cone_tick,logical,TRUE if steel cone was replaced
+data/,floodchlorinationsurvey.rda,replaced_steel_cone_count,numeric,Number of steel cones replaced
+data/,floodchlorinationsurvey.rda,replaced_top_sleeve_tick,logical,TRUE if top sleeve was replaced
+data/,floodchlorinationsurvey.rda,replaced_top_sleeve_count,numeric,Number of top sleeves replaced
+data/,floodchlorinationsurvey.rda,functionality_after,character,Functional status of the water point after intervention
+data/,floodchlorinationsurvey.rda,time_to_fill_20l_bucket,numeric,Time (in seconds) it took to fill a 20L bucket
+data/,floodchlorinationsurvey.rda,strokes_to_yield_water,numeric,Number of strokes required to yield water from the pump

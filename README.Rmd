@@ -1,0 +1,253 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# USAID Flood Response Rehabilitation and Chlorination Survey
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+This dataset originates from the USAID Flood Response Rehabilitation and
+Chlorination Survey, conducted between 2019 and 2020 in Mulanje
+District, Malawi. The data was collected using the mWater mobile
+platform by field teams working to assess, rehabilitate, and chlorinate
+rural handpump-equipped water points affected by flooding.
+
+The dataset includes detailed records on:
+
+-   Borehole component condition before and after rehabilitation
+-   Chlorination activities
+-   Community mobilization
+-   Environmental risks near water points
+-   Functionality status and water access metrics post-rehabilitation
+
+Photos and GPS coordinates are embedded via cloud-linked URLs to provide
+visual and spatial evidence of the rehabilitation process.
+
+**Potential Use Cases**
+
+1.  WASH Program Monitoring and Evaluation
+
+-   Track the impact of rehabilitation efforts on water point
+    functionality.
+
+-   Monitor the effectiveness of chlorination in flood-prone regions.
+
+2.  Infrastructure Asset Management
+
+-   Identify components frequently requiring replacement.
+
+-   Schedule preventive maintenance and prioritize resources.
+
+3.  Disaster Response Planning
+
+-   Map flood-affected water infrastructure and assess repair timelines.
+
+-   Use historical damage and repair data to prepare for future climate
+    shocks.
+
+4.  Public Health Risk Assessment
+
+-   Analyze the relationship between water source integrity and
+    contamination risks (e.g., proximity to latrines or cemeteries).
+
+5.  Policy and Program Design
+
+-   Guide government and donor decisions on where and how to invest in
+    resilient rural water systems.
+
+6.  Training and Capacity Building
+
+-   Use the data and photos as case studies for training technicians or
+    water committees.
+
+Potential Users of this data
+
+1. Government agencies (e.g., Ministry of Water, District Water
+Offices)
+
+2.  NGOs and implementing partners involved in WASH and emergency
+    response
+
+3.  Donor agencies such as USAID, to assess project outcomes and guide
+    future funding
+
+4.  Researchers and public health analysts studying the impacts of
+    infrastructure damage and recovery
+
+5.  Water point mechanics and private sector suppliers, to inform
+    maintenance and procurement planning
+
+6.  Community-based organizations (CBOs) and Water Point Committees, for
+    local monitoring and advocacy
+
+## Installation
+
+You can install the development version of floodchlorinationsurvey from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/floodchlorinationsurvey")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/floodchlorinationsurvey/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to the USAID Flood Response Rehabilitation and Chlorination Survey, conducted between 2019 and 2020 in Mulanje District, Malawi.
+
+```{r}
+library(floodchlorinationsurvey)
+```
+
+### floodchlorinationsurvey
+
+The dataset `floodchlorinationsurvey` contains 
+`r nrow(floodchlorinationsurvey)` observations and
+`r ncol(floodchlorinationsurvey)` variables
+
+```{r}
+floodchlorinationsurvey |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "floodchlorinationsurvey.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Example
+
+```{r}
+library(floodchlorinationsurvey)
+
+# Visualization: Most Frequently Replaced Components
+# Purpose:  Highlight common mechanical failures. 
+
+# Load libraries
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Define the replacement tick variables (TRUE/FALSE indicating part was replaced)
+tick_vars <- c(
+  "replaced_rods_tick", "replaced_flapper_tick", "replaced_handle_tick",
+  "replaced_cylinder_tick", "replaced_socket_tick", "replaced_rope_tick",
+  "replaced_footvalve_bobbin_tick", "replaced_footvalve_body_tick",
+  "replaced_plunger_bobbin_tick", "replaced_plunger_body_tick",
+  "replaced_rodhanger_tick", "replaced_head_bolt_tick",
+  "replaced_compression_cone_tick", "replaced_pump_head_case_tick",
+  "replaced_pump_head_cover_tick", "replaced_rising_main_tick",
+  "replaced_fulcrum_pin_tick", "replaced_fulcrum_bearings_tick",
+  "replaced_hanger_pin_tick", "replaced_hanger_bearings_tick",
+  "replaced_steel_cone_tick", "replaced_top_sleeve_tick",
+  "replaced_rod_centralisers_tick", "replaced_rising_centralisers_tick"
+)
+
+# Count how many times each component was marked as replaced (TRUE)
+component_freq <- floodchlorinationsurvey %>%
+  # Select only the replacement tick columns
+  select(all_of(tick_vars)) %>%
+  # Summarise to count how many TRUEs per column
+  summarise(across(everything(), ~ sum(. == TRUE, na.rm = TRUE))) %>%
+  # Reshape the summary to long format: component | count
+  pivot_longer(cols = everything(), 
+               names_to = "component", 
+               values_to = "count") %>%
+  # Sort in descending order by count
+  arrange(desc(count))
+
+# Clean component names for better readability
+component_freq$component <- gsub("replaced_|_tick", "", component_freq$component)  # Remove prefixes/suffixes
+component_freq$component <- gsub("_", " ", component_freq$component)               # Replace underscores with spaces
+component_freq$component <- tools::toTitleCase(component_freq$component)           # Capitalize each word
+
+# Create a horizontal bar chart
+ggplot(component_freq, aes(x = count, y = reorder(component, count))) +
+  geom_bar(stat = "identity", fill = "#2a9d8f") +  
+  labs(
+    title = "Most Frequently Replaced Handpump Components",
+    x = "Number of Replacements",
+    y = "Component"
+  ) +
+  theme_minimal(base_size = 13) 
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("floodchlorinationsurvey")
+```

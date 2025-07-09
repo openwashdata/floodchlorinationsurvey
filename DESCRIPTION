@@ -1,11 +1,34 @@
 Package: floodchlorinationsurvey
-Title: What the Package Does (One Line, Title Case)
+Title: USAID Flood Response Rehabilitation and Chlorination Survey
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R: c(
+    person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3197-6244")),
+    person("Evance", role = "ctb"),
+    person("Julius", "Kutaumbe", role = "ctb"),
+    person("Eramore", role = "ctb"),
+    person("Patrick", "Katholowamo", role = "ctb"),
+    person("Rashid", "Kumbu", role = "ctb"),
+    person("Mkangara", role = "ctb"),
+    person("Benja", "Moree", role = "ctb"),
+    person("Rober", "Gerald", role = "ctb"),
+    person("Olipa", role = "ctb"),
+    person("Laurent CT", "Levesque", role = "ctb"),
+    person("Shaun", "MacLeod", role = "ctb"),
+    person("Davie", "Selenje", role = "ctb"),
+    person("Mayamiko", "Jumbe", role = "ctb"),
+    person("Given", "Nyasulu", role = "ctb")
+  )
+Description: This R package provides tools for analyzing and visualizing data from the USAID Flood Response Rehabilitation and Chlorination Survey conducted in Mulanje, Malawi (2019–2020). It includes functions to assess handpump component replacements, evaluate changes in functionality before and after rehabilitation, and identify common repair trends using mWater-collected data.
+License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Language: en-GB
+Config/Needs/website: rmarkdown
+Date: 2025-07-01
+URL: https://github.com/openwashdata/floodchlorinationsurvey
+BugReports: https://github.com/openwashdata/floodchlorinationsurvey/issues
