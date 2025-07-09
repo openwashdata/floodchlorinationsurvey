@@ -25,10 +25,9 @@ knitr::opts_chunk$set(
 # USAID Flood Response Rehabilitation and Chlorination Survey
 
 <!-- badges: start -->
-
+[![R-CMD-check](https://github.com/openwashdata/floodchlorinationsurvey/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/floodchlorinationsurvey/actions/workflows/R-CMD-check.yaml)
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
 <!-- badges: end -->
 
 This dataset originates from the USAID Flood Response Rehabilitation and
