@@ -1,0 +1,13 @@
+
+bibentry(bibtype = "Misc",
+         key = "mhango:2025",
+         title = "floodchlorinationsurvey: USAID Flood Response Rehabilitation and Chlorination Survey",
+         author = person(given = "Emmanuel",
+                         family = "Mhango",
+                         email = "emmanuellmhango@gmail.com",
+                         comment = c(ORCID = "0000-0003-3197-6244")),
+         year = "2025",
+         doi = "10.5281/zenodo.15846578",
+         url = "https://github.com/openwashdata/floodchlorinationsurvey",
+         abstract = "This R package provides tools for analyzing and visualizing data from the USAID Flood Response Rehabilitation and Chlorination Survey conducted in Mulanje, Malawi (2019–2020). It includes functions to assess handpump component replacements, evaluate changes in functionality before and after rehabilitation, and identify common repair trends using mWater-collected data.",
+         version = "0.1.0")

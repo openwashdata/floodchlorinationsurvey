@@ -1,53 +1,32 @@
+# --------------------------------------------
+# CITATION file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# --------------------------------------------
+ 
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as below."
+message: 'To cite package "floodchlorinationsurvey" in publications use:'
+type: software
+license: CC-BY-4.0
+title: 'floodchlorinationsurvey: USAID Flood Response Rehabilitation and Chlorination
+  Survey'
+version: 0.1.0
+doi: 10.5281/zenodo.15846578
+abstract: This R package provides tools for analyzing and visualizing data from the
+  USAID Flood Response Rehabilitation and Chlorination Survey conducted in Mulanje,
+  Malawi (2019–2020). It includes functions to assess handpump component replacements,
+  evaluate changes in functionality before and after rehabilitation, and identify
+  common repair trends using mWater-collected data.
 authors:
-- family-names: "Mhango"
-  given-names: "Emmanuel"
-  email: "emmanuellmhango@gmail.com"
-  orcid: "https://orcid.org/0000-0003-3197-6244"
-- family-names: "Evance"
-  given-names: ""
-- family-names: "Kutaumbe"
-  given-names: "Julius"
-- family-names: "Eramore"
-  given-names: ""
-- family-names: "Katholowamo"
-  given-names: "Patrick"
-- family-names: "Kumbu"
-  given-names: "Rashid"
-- family-names: "Mkangara"
-  given-names: ""
-- family-names: "Moree"
-  given-names: "Benja"
-- family-names: "Gerald"
-  given-names: "Rober"
-- family-names: "Olipa"
-  given-names: ""
-- family-names: "Levesque"
-  given-names: "Laurent CT"
-- family-names: "MacLeod"
-  given-names: "Shaun"
-- family-names: "Selenje"
-  given-names: "Davie"
-- family-names: "Jumbe"
-  given-names: "Mayamiko"
-- family-names: "Nyasulu"
-  given-names: "Given"
-title: "floodchlorinationsurvey: USAID Flood Response Rehabilitation and Chlorination Survey"
-version: 0.0.0.9000
-date-released: 2025-07-01
-url: "https://github.com/openwashdata/floodchlorinationsurvey"
-abstract: "This R package provides tools for analyzing and visualizing data from the USAID Flood Response Rehabilitation and Chlorination Survey conducted in Mulanje, Malawi (2019–2020). It includes functions to assess handpump component replacements, evaluate changes in functionality before and after rehabilitation, and identify common repair trends using mWater-collected data."
-keywords:
-  - water
-  - sanitation
-  - hygiene
-  - WASH
-  - Malawi
-  - flood response
-  - chlorination
-  - handpump rehabilitation
-  - USAID
-  - mWater
-license: "CC-BY-4.0"
-type: dataset
+- family-names: Mhango
+  given-names: Emmanuel
+  email: emmanuellmhango@gmail.com
+  orcid: https://orcid.org/0000-0003-3197-6244
+repository-code: https://github.com/openwashdata/floodchlorinationsurvey
+url: https://github.com/openwashdata/floodchlorinationsurvey
+date-released: '2025-07-01'
+contact:
+- family-names: Mhango
+  given-names: Emmanuel
+  email: emmanuellmhango@gmail.com
+  orcid: https://orcid.org/0000-0003-3197-6244
+
