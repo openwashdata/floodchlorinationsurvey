@@ -11,8 +11,6 @@ library(dplyr)
 library(readxl)
 library(openxlsx)
 library(lubridate)
-library(ggplot2)
-library(maps)
 
 # Load Data --------------------------------------------------------------------
 # Load the necessary data from a CSV file
@@ -26,6 +24,23 @@ data_in <- readr::read_csv("data-raw/flood response waterpoint rehabilitation an
 # Remove rows where the 'latitude' column contains NULL (NA) values
 data_in <- data_in %>%
   filter(!is.na(latitude))
+
+# Convert date columns to Date class
+# These dates are in DD/MM/YYYY format
+data_in <- data_in %>%
+  mutate(
+    submitted_on = dmy(submitted_on),
+    chlorination_rehab_date = dmy(chlorination_rehab_date)
+  )
+
+# Standardize rating variables
+# Convert all rating columns from character to numeric
+# Replace "Missing" text with NA
+rating_cols <- grep("^rating_", names(data_in), value = TRUE)
+data_in[rating_cols] <- lapply(data_in[rating_cols], function(x) {
+  x[x == "Missing"] <- NA
+  as.numeric(x)
+})
 
 
 # Function to check for non-UTF-8 characters in character columns
@@ -64,6 +79,32 @@ data_in[] <- lapply(data_in, function(x) {
 
 # Re-check the data for non-UTF-8 characters after the conversion
 check_utf8(data_in)
+
+# Data validation checks
+# Check coordinate ranges
+invalid_coords <- data_in %>%
+  filter(!between(latitude, -17.5, -9.0) | !between(longitude, 32.0, 36.0))
+
+if (nrow(invalid_coords) > 0) {
+  warning(paste("Found", nrow(invalid_coords), "rows with coordinates outside Malawi bounds"))
+}
+
+# Check rating values are within 1-5 range
+for (col in rating_cols) {
+  invalid_ratings <- data_in[[col]][!is.na(data_in[[col]]) & 
+                                    (data_in[[col]] < 1 | data_in[[col]] > 5)]
+  if (length(invalid_ratings) > 0) {
+    warning(paste("Column", col, "has", length(invalid_ratings), 
+                  "values outside 1-5 range"))
+  }
+}
+
+# Note on missing data patterns:
+# - Chlorination-related variables have ~53% missing values because not all 
+#   waterpoints underwent chlorination treatment
+# - Replacement part variables have high missing rates (30-90%) because 
+#   only damaged parts needed replacement
+# - parts_chlorinated_unknown is 100% missing, likely a data collection issue
 
 floodchlorinationsurvey <- data_in
 
