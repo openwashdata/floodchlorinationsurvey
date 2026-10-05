@@ -1,5 +1,5 @@
 
-url: https://github.com/openwashdata/floodchlorinationsurvey
+url: https://openwashdata.github.io/floodchlorinationsurvey/
 template:
   bootstrap: 5
   includes:
