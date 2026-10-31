@@ -11,6 +11,8 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15846578.svg)](https://zenodo.org/doi/10.5281/zenodo.15846578)
 <!-- badges: end -->
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 This dataset originates from the USAID Flood Response Rehabilitation and
 Chlorination Survey, conducted between 2019 and 2020 in Mulanje
 District, Malawi. The data was collected using the mWater mobile
