@@ -1,5 +1,7 @@
 # USAID Flood Response Rehabilitation and Chlorination Survey
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 This dataset originates from the USAID Flood Response Rehabilitation and
 Chlorination Survey, conducted between 2019 and 2020 in Mulanje
 District, Malawi. The data was collected using the mWater mobile
@@ -357,6 +359,6 @@ citation("floodchlorinationsurvey")
 
 ## All functions
 
-- [`floodchlorinationsurvey`](https://github.com/openwashdata/floodchlorinationsurvey/reference/floodchlorinationsurvey.md)
+- [`floodchlorinationsurvey`](https://openwashdata.github.io/floodchlorinationsurvey/reference/floodchlorinationsurvey.md)
   : USAID Flood Response Rehabilitation and Chlorination Survey
 

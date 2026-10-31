@@ -2,5 +2,5 @@
 
 ## All functions
 
-- [`floodchlorinationsurvey`](https://github.com/openwashdata/floodchlorinationsurvey/reference/floodchlorinationsurvey.md)
+- [`floodchlorinationsurvey`](https://openwashdata.github.io/floodchlorinationsurvey/reference/floodchlorinationsurvey.md)
   : USAID Flood Response Rehabilitation and Chlorination Survey
