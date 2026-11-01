@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# USAID Flood Response Rehabilitation and Chlorination Survey
+# USAID Flood Response Rehabilitation and Chlorination Survey <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -10,8 +10,6 @@
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15846578.svg)](https://zenodo.org/doi/10.5281/zenodo.15846578)
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 This dataset originates from the USAID Flood Response Rehabilitation and
 Chlorination Survey, conducted between 2019 and 2020 in Mulanje
@@ -2970,6 +2968,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/floodchlorinationsurvey/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
